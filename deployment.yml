@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: apachewebsite
-        image: akshu20791/apachewebsite:latest
+        image: arya023/apachewebsite:latest
         ports:
         - containerPort: 80
 
