@@ -13,7 +13,7 @@ pipeline {
         }
         stage('run ansibleplaybook'){
           steps{
-            ansiblePlaybook credentialsId: 'ansible-ssh', installation: 'ansible2', inventory: 'inventory.ini', playbook: 'installapche.yml', vaultTmpPath: ''
+            ansiblePlaybook credentialsId: 'ansible-ssh', installation: 'ansible', inventory: 'inventory.ini', playbook: 'installapche.yml', vaultTmpPath: ''
           }
         }
        stage('Docker Build & Push') {
