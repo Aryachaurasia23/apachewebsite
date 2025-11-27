@@ -1,14 +1,14 @@
 pipeline {
     agent any
       environment {
-        DOCKER_IMAGE = 'akshu20791/apachewebsite:latest'
-      //  KUBECONFIG = credentials('kubeconfig')
+        DOCKER_IMAGE = 'arya023/apachewebsite:latest'
+        KUBECONFIG = credentials('kubeconfig')
     }
 
     stages {
         stage('Clone Git repository') {
             steps {
-                 git 'https://github.com/akshu20791/apachewebsite/'
+                 git 'https://github.com/Aryachaurasia23/apachewebsite/'
             }
         }
         stage('run ansibleplaybook'){
