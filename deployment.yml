@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: apachewebsite
-        image: arya023/apachewebsite:latest
+        image: arya023/apachewebsite:v1.0
         ports:
         - containerPort: 80
 
@@ -34,4 +34,4 @@ spec:
       port: 80        # Service port
       targetPort: 80  # Container port
       nodePort: 30080 # Optional: fixed NodePort
-  type: NodePort      # Change to LoadBalancer if using cloud provider
+  type: LoadBalancer      # Change to LoadBalancer if using cloud provider
